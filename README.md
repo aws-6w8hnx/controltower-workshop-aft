@@ -1,7 +1,7 @@
 # AWS Control Tower Account Factory for Terraform (AFT)
 A Control Tower Workshop for Account Factory for Terraform (AFT)
 
-
+## Questions from the session 1:
 ### When you configure your landing zone for new Regions, AWS Control Tower detective controls adhere to the following rules:
 
 - [You can’t apply new detective controls to existing OUs containing accounts that are not updated. When you’ve configured your AWS Control Tower landing zone into a new Region (by updating your landing zone), you must update existing accounts in your existing OUs before you can enable new detective controls on those OUs and accounts.](https://docs.aws.amazon.com/controltower/latest/userguide/region-how.html#:~:text=You%20can%E2%80%99t%20apply,OUs%20and%20accounts.)
@@ -15,6 +15,9 @@ When enable `detective` Controls (in All controls -> Search for `Behavior = Dete
 
 
 ---
+## Introduce to Terraform
 
-AFT Workflow:
+
+
+## AFT Workflow:
 <img width="900" alt="image" src="https://github.com/aws-6w8hnx/ct-workshop-aft/assets/104741984/3612bddd-2b77-4ea0-84bc-c47f9885ad8f">
