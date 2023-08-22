@@ -1,4 +1,4 @@
-# ct-workshop-aft
+# AWS Control Tower Account Factory for Terraform (AFT)
 A Control Tower Workshop for Account Factory for Terraform (AFT)
 
 
