@@ -57,7 +57,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "aft_workshop_buck
 }
 ```
   
-4. Wrap:
+4. Wrap up:
 ```terraform
 locals {
     account_id = data.aws_caller_identity.current.account_id
