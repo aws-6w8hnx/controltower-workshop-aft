@@ -92,13 +92,61 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "aft_workshop_buck
 }
 ```
 
-### 2. Terraform state
+#### Two examples:
+* A bad example: https://github.com/aws-6w8hnx/controltower-workshop-aft/tree/main/terraform/a-bad-example
+* best practice: https://github.com/aws-6w8hnx/controltower-workshop-aft/tree/main/terraform/best-practice
 
 
-### 3. Terraform Modules
+### 2. Terraform Modules
 
+* Simple module: https://github.com/aws-6w8hnx/controltower-workshop-aft/tree/main/terraform/use-a-module
 
+### 3. Terraform state
+Terraform must store state about your managed infrastructure and configuration. This state is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures.
 
+* A part of tfstate file sample:
+```json
+{
+  "version": 4,
+  "terraform_version": "1.4.5",
+  "serial": 24,
+  "lineage": "4f64e350-d040-e39b-0ed9-68db4e3f3e1d",
+  "outputs": {},
+  "resources": [
+...
+    {
+      "mode": "managed",
+      "type": "aws_kms_key",
+      "name": "aft_workshop_bucket_kms_key",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:kms:us-east-1:257063532661:key/cd03466d-ce57-4ca7-9909-1714bf26b164",
+            "bypass_policy_lockout_safety_check": false,
+            "custom_key_store_id": "",
+            "customer_master_key_spec": "SYMMETRIC_DEFAULT",
+            "deletion_window_in_days": 10,
+            "description": "This key is used to encrypt bucket objects",
+            "enable_key_rotation": false,
+            "id": "cd03466d-ce57-4ca7-9909-1714bf26b164",
+            "is_enabled": true,
+            "key_id": "cd03466d-ce57-4ca7-9909-1714bf26b164",
+            "key_usage": "ENCRYPT_DECRYPT",
+            "multi_region": false,
+            "policy": "{\"Id\":\"key-default-1\",\"Statement\":[{\"Action\":\"kms:*\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::257063532661:root\"},\"Resource\":\"*\",\"Sid\":\"Enable IAM User Permissions\"}],\"Version\":\"2012-10-17\"}",
+            "tags": {},
+            "tags_all": {}
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+...
+}
+```
 
 
 ## AFT Workflow:
