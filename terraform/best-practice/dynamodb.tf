@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "aft_workshop_backend_ddb_tfstate_lock" {
-  name = "aft-workshop-backend-${local.account_id}-${region}-tfstate-lock"
+  name = "${local.naming_convention}-ddb"
 
   hash_key       = "LockID"
   read_capacity  = 20

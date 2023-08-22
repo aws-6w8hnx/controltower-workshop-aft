@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "aft_workshop_bucket" {
-  bucket = "aft-workshop-bucket-${local.account_id}"
+  bucket = "${local.naming_convention}-s3"
   force_destroy = true
 }
 
