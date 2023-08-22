@@ -92,6 +92,22 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "aft_workshop_buck
 }
 ```
 
+5. Deploy and destroy:
+```bash
+# Prepare your working directory for other commands
+terraform init
+
+# Show changes required by the current configuration
+terraform plan -out tfplan
+
+# Create or update infrastructure
+terraform apply "tfplan"
+
+# Destroy previously-created infrastructure
+terraform destroy
+```
+
+
 #### Two examples:
 * A bad example: https://github.com/aws-6w8hnx/controltower-workshop-aft/tree/main/terraform/a-bad-example
 * best practice: https://github.com/aws-6w8hnx/controltower-workshop-aft/tree/main/terraform/best-practice
@@ -104,7 +120,23 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "aft_workshop_buck
 ### 3. Terraform state
 Terraform must store state about your managed infrastructure and configuration. This state is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures.
 
-* A part of tfstate file sample:
+#### :one: **Best practice** (Sample saved in samples dir):
+* Store the terraform state file in an s3 bucket,
+* Or use a remote backend to store the file in Terraform Cloud/Enterprise
+
+
+### :two: To move local state file to a remote backend:
+
+- Copy the sample backend_s3.tf content to backend.tf,
+- run the following:
+
+```
+# Reconfigure a backend, and attempt to migrate any existing state
+terraform init -migrate-state
+```
+
+
+* Here is a sample of a part of `tfstate` file:
 ```json
 {
   "version": 4,
