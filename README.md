@@ -13,7 +13,7 @@ When enabling `detective` Controls (in All controls -> Search for `Behavior = De
 <img width="600" alt="image" src="https://github.com/aws-6w8hnx/ct-workshop-aft/assets/104741984/061df152-5167-4049-bbef-326ac88c86f0">
 
 ---
-## Introduce to Terraform
+## :beginner: Introduce to Terraform
 
 ### 1. How to create a resource using Terraform
 1. Create a s3 bucket:
@@ -181,8 +181,13 @@ terraform init -migrate-state
 ```
 
 
-## AFT Workflow:
+## :eight_spoked_asterisk: Deep dive to AFT workflow:
+
+### :one: [Account Factory Request](https://controltower.aws-management.tools/automation/aft_repo/#account-factory-request)
 <img width="900" alt="image" src="https://github.com/aws-6w8hnx/ct-workshop-aft/assets/104741984/3612bddd-2b77-4ea0-84bc-c47f9885ad8f">
+
+### :two: [Provisioning Framework](https://controltower.aws-management.tools/automation/aft_repo/#provisioning-framework)
+<img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/assets/29943707/0c62985d-1d54-4190-8002-3a189e8d14dc">
 
 
 ## AFT Github Repos:
