@@ -208,6 +208,11 @@ Arn:         arn:aws:events:us-east-1:239342779695:event-bus/aft-events-from-ct-
 }
 ```
 
+#### State machines
+- Name:      `aft-account-provisioning-framework`
+- Execution: `0ff6d6db-c088-459e-a999-2f7df4403a23`
+<img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/blob/6e2f583f5145a8ab7431bc8ae3c851127cd8e8cf/static_images/aft-state-machine-execution%20.png">
+
 ### :two: [Provisioning Framework](https://controltower.aws-management.tools/automation/aft_repo/#provisioning-framework)
 <img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/assets/29943707/0c62985d-1d54-4190-8002-3a189e8d14dc">
 
