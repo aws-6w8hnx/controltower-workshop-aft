@@ -184,7 +184,7 @@ terraform init -migrate-state
 ## :eight_spoked_asterisk: Deep dive to AFT workflow:
 
 ### :one: [Account Factory Request](https://controltower.aws-management.tools/automation/aft_repo/#account-factory-request)
-<img width="900" alt="image" src="https://github.com/aws-6w8hnx/ct-workshop-aft/assets/104741984/3612bddd-2b77-4ea0-84bc-c47f9885ad8f">
+<img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/blob/8bd0e623eaff79f2f04aa5547e07fd7991391da4/static_images/high-level-aft-diagram.png">
 
 ### :two: [Provisioning Framework](https://controltower.aws-management.tools/automation/aft_repo/#provisioning-framework)
 <img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/assets/29943707/0c62985d-1d54-4190-8002-3a189e8d14dc">
