@@ -184,7 +184,7 @@ terraform init -migrate-state
 ## :eight_spoked_asterisk: Deep dive to AFT workflow:
 
 ### :one: [Account Factory Request](https://controltower.aws-management.tools/automation/aft_repo/#account-factory-request)
-<img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/blob/8bd0e623eaff79f2f04aa5547e07fd7991391da4/static_images/high-level-aft-diagram.png">
+<img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/blob/fae3ab10e96c38dddf9f6f6da207616e19e2cc28/static_images/high-level-aft-diagram.png">
 
 
 #### Event Bridge
