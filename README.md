@@ -186,6 +186,28 @@ terraform init -migrate-state
 ### :one: [Account Factory Request](https://controltower.aws-management.tools/automation/aft_repo/#account-factory-request)
 <img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/blob/8bd0e623eaff79f2f04aa5547e07fd7991391da4/static_images/high-level-aft-diagram.png">
 
+
+#### Event Bridge
+In Control Tower Management Account: `453917013318`, event bridge rule: `aft-capture-ct-events` with cross account target, the target and rule details show below:
+
+- **Target** (cross account: AFT Management Account Id: `239342779695`)
+```ruby
+Target Name: arn:aws:events:us-east-1:239342779695:event-bus/aft-events-from-ct-management
+Type:        Event bus in a different account or Region
+Arn:         arn:aws:events:us-east-1:239342779695:event-bus/aft-events-from-ct-management
+```
+
+- **Rule**:
+```json
+{
+  "detail": {
+    "eventName": ["CreateManagedAccount", "UpdateManagedAccount"]
+  },
+  "detail-type": ["AWS Service Event via CloudTrail"],
+  "source": ["aws.controltower"]
+}
+```
+
 ### :two: [Provisioning Framework](https://controltower.aws-management.tools/automation/aft_repo/#provisioning-framework)
 <img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/assets/29943707/0c62985d-1d54-4190-8002-3a189e8d14dc">
 
