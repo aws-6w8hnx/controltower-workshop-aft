@@ -186,6 +186,20 @@ terraform init -migrate-state
 ### :one: [Account Factory Request](https://controltower.aws-management.tools/automation/aft_repo/#account-factory-request)
 <img width="900" alt="image" src="https://github.com/aws-6w8hnx/controltower-workshop-aft/blob/fae3ab10e96c38dddf9f6f6da207616e19e2cc28/static_images/high-level-aft-diagram.png">
 
+Please be noted the above diagram was miss leading on the `CT Update` No workflow, because:
+1. When there is no update, the state machine: `aft-account-provisioning-framework` was triggered by lambda: `aft-account-request-action-trigger` directly, see below [log](https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/aft-account-request-action-trigger?tab=monitoring):
+```json
+2024-11-21T05:24:21.714Z
+{
+    "time_stamp": "2024-11-21 05:24:21,714",
+    "module": "aft_utils",
+    "log_level": "INFO",
+    "log_message": "Starting SFN execution of arn:aws:states:us-east-1:239342779695:stateMachine:aft-account-provisioning-framework"
+}
+```
+2. The lambda: `aft-invoke-aft-account-provisioning-framework` is only triggered when a new account created.
+
+
 
 #### Event Bridge
 In Control Tower Management Account: `453917013318`, event bridge rule: `aft-capture-ct-events` with cross account target, the target and rule details show below:
